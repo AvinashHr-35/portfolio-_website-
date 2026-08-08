@@ -14,10 +14,9 @@ const skills = [
   { name: "Power BI", icon: "bar_chart", level: "Working Knowledge" },
   { name: "Firebase", icon: "local_fire_department", level: "Beginner" },
   { name: "HTML", icon: "data_object", level: "Working Knowledge" },
-  { name: "CSS", icon: "palette", level: "Working Knowledge" },
-  { name: "JavaScript", icon: "bolt", level: "Beginner" },
-  { name: "ASP.NET", icon: "hub", level: "Beginner" },
-  { name: "API Integration", icon: "api", level: "Beginner" },
+  {name : "pandas", icon: "data_array", level: "Working Knowledge"},
+  {name : "matplotlib", icon: "data_array", level: "Working Knowledge"},
+  {name : "seaborn", icon: "data_array", level: "Working Knowledge"},
   { name: "Data Cleaning", icon: "cleaning_services", level: "Working Knowledge" },
   { name: "Data Visualization", icon: "monitoring", level: "Working Knowledge" }
 ];
@@ -40,8 +39,8 @@ const projects = [
     category: "python",
     categoryLabel: "Python",
     description: "XGBoost model on the UCI Diabetes dataset (101,745 patients) predicting 30-day readmission risk, with SHAP for interpretability.",
-    technologies: ["Python", "Pandas", "XGBoost", "SHAP"],
-    features: ["Full EDA and data cleaning pipeline", "XGBoost model at 60% recall", "SHAP feature importance analysis", "Power BI dashboard for stakeholders"],
+    technologies: ["Python", "Pandas","matplotlib", "SHAP"],
+    features: ["Full EDA and data cleaning pipeline", "SHAP feature importance analysis", "Power BI dashboard for stakeholders"],
     repoLink: "https://github.com/AvinashHr-35/data-analyst-portfolio",
     demoLink: "#",
     placeholder: false
@@ -57,17 +56,7 @@ const projects = [
     demoLink: "#",
     placeholder: true
   },
-  {
-    name: "Student Management System",
-    category: "web",
-    categoryLabel: "Web Development",
-    description: "A simple application for managing student records, courses and academic information.",
-    technologies: ["ASP.NET", "SQL", "HTML", "CSS"],
-    features: ["Add, update, delete student records", "Search by course or ID", "Structured SQL backend"],
-    repoLink: "#",
-    demoLink: "#",
-    placeholder: true
-  }
+ 
 ];
 
 const services = [
