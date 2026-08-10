@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- SEO -->
+<title>Avinash Saini | Data Analyst — SQL, Python & Power BI</title>
+<meta name="description" content="Portfolio of Avinash Saini, a Data Analyst specializing in SQL, Python, Power BI and end-to-end analytics — from data cleaning to predictive modeling and dashboards." />
+<meta name="theme-color" content="#4A4E4A" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Avinash Saini | Data Analyst — SQL, Python & Power BI" />
+<meta property="og:description" content="Portfolio of Avinash Saini, a Data Analyst specializing in SQL, Python, Power BI and end-to-end analytics — from data cleaning to predictive modeling and dashboards." />
+<meta property="og:type" content="website" />
+
+<!-- Favicon (inline SVG placeholder — swap for a real favicon.ico/png later) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B1E3D'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Poppins,sans-serif' font-weight='700' fill='%235B9BFF' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,300..500,0..1&display=swap" rel="stylesheet" />
+
+<!-- Tailwind (utility classes only, no build step needed) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode: "class" };
+</script>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#F7F5F0] dark:bg-[#1A1F1B] text-[#4A4E4A] dark:text-[#ECEAE2] font-body transition-colors duration-300">
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-[#1E241E]/85 backdrop-blur-md border-b border-[#E4E0D8] dark:border-[#3A423B]">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 md:px-8 py-4">
+    <a href="#home" class="font-display font-700 text-lg tracking-tight">
+      Avinash<span class="text-[#4A7C59] dark:text-[#6FA97F]">.</span>Saini
+    </a>
+
+    <ul id="nav-links" class="hidden md:flex items-center gap-7 text-sm font-medium text-[#817564] dark:text-[#B9B2A5]">
+      <li><a href="#home" class="nav-link" data-nav="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+      <li><a href="#services" class="nav-link" data-nav="services">Services</a></li>
+      <li><a href="#resume" class="nav-link" data-nav="resume">Resume</a></li>
+      <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" aria-label="Toggle dark mode" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#EEF2F8] dark:hover:bg-[#2C352C] transition-colors">
+        <span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined text-[20px] hidden dark:inline">light_mode</span>
+      </button>
+      <a href="#contact" class="hidden sm:inline-flex items-center gap-1 bg-[#4A4E4A] dark:bg-[#6FA97F] text-white dark:text-[#1A1F1B] text-sm font-semibold px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity">
+        Hire Me
+      </a>
+      <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#EEF2F8] dark:hover:bg-[#2C352C]">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden border-t border-[#E4E0D8] dark:border-[#3A423B] bg-white dark:bg-[#1E241E] px-5 py-4">
+    <ul class="flex flex-col gap-4 text-sm font-medium text-[#817564] dark:text-[#B9B2A5]">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#resume" class="mobile-nav-link">Resume</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <section id="home" class="max-w-6xl mx-auto px-5 md:px-8 pt-32 pb-20 md:pt-40 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold tracking-wide uppercase mb-4">Gurugram, India · Open to Remote</p>
+      <h1 class="font-display font-700 text-4xl sm:text-5xl leading-tight mb-4">
+        Hi, I'm Avinash Saini
+      </h1>
+      <p class="text-xl font-display font-600 text-[#4A7C59] dark:text-[#6FA97F] mb-5">
+        Data Analyst — SQL, Python &amp; Power BI
+      </p>
+      <p class="text-[#817564] dark:text-[#B9B2A5] text-base leading-relaxed max-w-md mb-8">
+        I turn raw, messy datasets into dashboards and models that non-technical stakeholders can actually act on — from data cleaning through EDA to Power BI reporting.
+      </p>
+
+      <div class="flex flex-wrap gap-3 mb-8">
+        <a href="#projects" class="bg-[#4A4E4A] dark:bg-[#6FA97F] text-white dark:text-[#1A1F1B] font-semibold text-sm px-6 py-3 rounded-full hover:opacity-90 transition-opacity">View My Projects</a>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="border border-[#E4E0D8] dark:border-[#3A423B] font-semibold text-sm px-6 py-3 rounded-full hover:border-[#4A7C59] hover:text-[#4A7C59] dark:hover:border-[#6FA97F] dark:hover:text-[#6FA97F] transition-colors">Download Resume</a>
+        <a href="#contact" class="font-semibold text-sm px-6 py-3 rounded-full text-[#4A7C59] dark:text-[#6FA97F] hover:bg-[#F0E8DB] dark:hover:bg-[#2C352C] transition-colors">Contact Me</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/AvinashHr-35" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <span class="material-symbols-outlined">code</span>
+        </a>
+        <a href="https://linkedin.com/in/avinashsaini" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <span class="material-symbols-outlined">work</span>
+        </a>
+        <a href="https://www.upwork.com/freelancers/~01d9fdac6531ea172c" target="_blank" rel="noopener" aria-label="Upwork" class="social-icon">
+          <span class="material-symbols-outlined">business_center</span>
+        </a>
+        <a href="mailto:avinashsaini56789@gmail.com" aria-label="Email" class="social-icon">
+          <span class="material-symbols-outlined">mail</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="rounded-2xl border border-[#E4E0D8] dark:border-[#3A423B] bg-white dark:bg-[#242B24] p-6 shadow-[0_20px_50px_-20px_rgba(11,30,61,0.25)]">
+        <div class="flex items-center gap-1.5 mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#E4E0D8] dark:bg-[#3A423B]"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#E4E0D8] dark:bg-[#3A423B]"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-[#E4E0D8] dark:bg-[#3A423B]"></span>
+          <span class="ml-auto text-[11px] text-[#817564] dark:text-[#B9B2A5] font-medium">dashboard.py</span>
+        </div>
+        <svg viewBox="0 0 400 220" class="w-full h-auto" role="img" aria-label="Illustration of raw data resolving into a clean trend line">
+          <polyline points="10,140 35,110 60,160 85,95 110,150 135,120 160,170 185,105"
+            fill="none" stroke="#E4E0D8" stroke-width="2" class="dark:stroke-[#3A423B]"/>
+          <polyline id="signal-line" points="10,150 60,120 110,135 160,80 210,95 260,55 310,65 390,25"
+            fill="none" stroke="#4A7C59" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="dark:stroke-[#6FA97F]"/>
+          <circle cx="390" cy="25" r="5" fill="#4A7C59" class="dark:fill-[#6FA97F]"/>
+          <rect x="15" y="185" width="18" height="25" rx="3" fill="#4A4E4A" class="dark:fill-[#6FA97F]" opacity="0.15"/>
+          <rect x="45" y="170" width="18" height="40" rx="3" fill="#4A4E4A" class="dark:fill-[#6FA97F]" opacity="0.3"/>
+          <rect x="75" y="150" width="18" height="60" rx="3" fill="#4A4E4A" class="dark:fill-[#6FA97F]" opacity="0.5"/>
+          <rect x="105" y="130" width="18" height="80" rx="3" fill="#4A7C59" class="dark:fill-[#6FA97F]"/>
+        </svg>
+        <div class="grid grid-cols-3 gap-3 mt-4 pt-4 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+          <div><p class="font-display font-700 text-lg">3</p><p class="text-[11px] text-[#817564] dark:text-[#B9B2A5]">Live projects</p></div>
+          <div><p class="font-display font-700 text-lg">100K+</p><p class="text-[11px] text-[#817564] dark:text-[#B9B2A5]">Rows analyzed</p></div>
+          <div><p class="font-display font-700 text-lg">2</p><p class="text-[11px] text-[#817564] dark:text-[#B9B2A5]">Certifications</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="max-w-6xl mx-auto px-5 md:px-8 py-20 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+    <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold uppercase tracking-wide mb-2">About</p>
+    <h2 class="font-display font-700 text-3xl mb-6 max-w-2xl">A closer look</h2>
+    <p class="text-[#817564] dark:text-[#B9B2A5] text-base leading-relaxed max-w-2xl mb-10">
+      Data Analyst with hands-on experience in end-to-end analytics — data cleaning, SQL querying, Python EDA, machine learning, and Power BI dashboard development. I've delivered 3 portfolio projects on 100K+ row datasets across healthcare, banking, and retail domains, translating raw data into quantified business insights for non-technical stakeholders.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="info-card">
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-2">school</span>
+        <p class="font-semibold text-sm mb-1">Education</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Bachelor of Computer Applications, CGPA 8.2/10</p>
+      </div>
+      <div class="info-card">
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-2">location_on</span>
+        <p class="font-semibold text-sm mb-1">Location</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Gurugram, India (Open to Remote)</p>
+      </div>
+      <div class="info-card">
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-2">target</span>
+        <p class="font-semibold text-sm mb-1">Focus</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">SQL, Python, Power BI and Business Intelligence</p>
+      </div>
+      <div class="info-card">
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-2">event_available</span>
+        <p class="font-semibold text-sm mb-1">Availability</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Open to remote analyst roles and freelance projects</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="max-w-6xl mx-auto px-5 md:px-8 py-20 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+    <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold uppercase tracking-wide mb-2">Skills</p>
+    <h2 class="font-display font-700 text-3xl mb-10">Tools I work with</h2>
+    <div id="skills-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"></div>
+  </section>
+
+  <section id="projects" class="max-w-6xl mx-auto px-5 md:px-8 py-20 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+    <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold uppercase tracking-wide mb-2">Projects</p>
+    <h2 class="font-display font-700 text-3xl mb-8">Selected work</h2>
+
+    <div id="filter-buttons" class="flex flex-wrap gap-2 mb-8">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+      <button class="filter-btn" data-filter="banking">Banking</button>
+      <button class="filter-btn" data-filter="retail">Retail</button>
+    </div>
+
+    <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <section id="services" class="max-w-6xl mx-auto px-5 md:px-8 py-20 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+    <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold uppercase tracking-wide mb-2">Services</p>
+    <h2 class="font-display font-700 text-3xl mb-10">How I can help</h2>
+    <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <section id="process" class="max-w-6xl mx-auto px-5 md:px-8 py-20 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+    <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold uppercase tracking-wide mb-2">Process</p>
+    <h2 class="font-display font-700 text-3xl mb-10">How a project runs</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-3">quiz</span>
+        <p class="font-semibold text-sm mb-1">Understand the requirement</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Clarify the problem, constraints and what success looks like before writing any code.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-3">design_services</span>
+        <p class="font-semibold text-sm mb-1">Plan the solution</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Map out the approach, tools and structure so the build phase has a clear direction.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-3">build</span>
+        <p class="font-semibold text-sm mb-1">Build and test</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Develop iteratively and test against real data and real use cases, not just happy paths.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <span class="material-symbols-outlined text-[#4A7C59] dark:text-[#6FA97F] mb-3">rocket_launch</span>
+        <p class="font-semibold text-sm mb-1">Deliver and support</p>
+        <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Hand off the finished work with documentation, and stay available for fixes and follow-ups.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="max-w-6xl mx-auto px-5 md:px-8 py-20 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+    <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold uppercase tracking-wide mb-2">Resume</p>
+    <h2 class="font-display font-700 text-3xl mb-8">Career summary</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold mb-2">Summary</h3>
+          <p class="text-[#817564] dark:text-[#B9B2A5] text-sm leading-relaxed">Data Analyst with hands-on experience in end-to-end analytics — data cleaning, SQL querying, Python EDA, machine learning, and Power BI dashboard development. Delivered 3 portfolio projects on 100K+ row datasets across healthcare, banking, and retail domains.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Experience</h3>
+          <p class="text-sm font-medium">Data Analytics Intern — AAM Infotech Pvt. Ltd., Gurugram</p>
+          <p class="text-xs text-[#817564] dark:text-[#B9B2A5] mb-2">Oct 2025 – Mar 2026</p>
+          <ul class="list-disc list-inside text-sm text-[#817564] dark:text-[#B9B2A5] space-y-1">
+            <li>Delivered end-to-end data analysis using SQL, Excel and Power BI, supporting reporting pipelines used by 3+ departments.</li>
+            <li>Built 5+ interactive Power BI dashboards with KPIs, slicers and drill-through reports, reducing stakeholder update turnaround time.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Education</h3>
+          <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Bachelor of Computer Applications (BCA), ISBM University — 2025</p>
+          <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">CGPA: 8.2/10 · DBMS, Data Structures, Python Programming, Software Engineering</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Certifications</h3>
+          <ul class="list-disc list-inside text-sm text-[#817564] dark:text-[#B9B2A5] space-y-1">
+            <li>Data Analytics Certification — Ducat School of AI (May 2025 – Jan 2026)</li>
+            <li>Data Analytics Job Simulation — Deloitte Australia, via Forage (2025)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold mb-2">Technical skills</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">SQL (MySQL, SQLite)</span><span class="chip">Python</span><span class="chip">Pandas</span>
+            <span class="chip">Scikit-learn</span><span class="chip">DAX</span><span class="chip">Power BI</span>
+            <span class="chip">Power Query</span><span class="chip">Excel</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Projects</h3>
+          <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">See the <a href="#projects" class="text-[#4A7C59] dark:text-[#6FA97F] underline underline-offset-2">Projects section</a> above for full case details.</p>
+        </div>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#4A4E4A] dark:bg-[#6FA97F] text-white dark:text-[#1A1F1B] font-semibold text-sm px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+          <span class="material-symbols-outlined text-[18px]">download</span> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="max-w-6xl mx-auto px-5 md:px-8 py-20 border-t border-[#E4E0D8] dark:border-[#3A423B]">
+    <p class="text-[#4A7C59] dark:text-[#6FA97F] text-sm font-semibold uppercase tracking-wide mb-2">Contact</p>
+    <h2 class="font-display font-700 text-3xl mb-10">Let's talk</h2>
+
+    <div class="grid md:grid-cols-5 gap-10">
+      <form id="contact-form" novalidate class="md:col-span-3 space-y-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="c-name" class="block text-sm font-medium mb-1">Name</label>
+            <input id="c-name" name="name" type="text" required class="form-input" placeholder="Your name" />
+            <p class="form-error" data-error-for="c-name"></p>
+          </div>
+          <div>
+            <label for="c-email" class="block text-sm font-medium mb-1">Email</label>
+            <input id="c-email" name="email" type="email" required class="form-input" placeholder="you@example.com" />
+            <p class="form-error" data-error-for="c-email"></p>
+          </div>
+        </div>
+        <div>
+          <label for="c-subject" class="block text-sm font-medium mb-1">Subject</label>
+          <input id="c-subject" name="subject" type="text" required class="form-input" placeholder="What's this about?" />
+          <p class="form-error" data-error-for="c-subject"></p>
+        </div>
+        <div>
+          <label for="c-message" class="block text-sm font-medium mb-1">Message</label>
+          <textarea id="c-message" name="message" required rows="5" class="form-input" placeholder="Tell me about your project..."></textarea>
+          <p class="form-error" data-error-for="c-message"></p>
+        </div>
+        <button type="submit" class="bg-[#4A4E4A] dark:bg-[#6FA97F] text-white dark:text-[#1A1F1B] font-semibold text-sm px-6 py-3 rounded-full hover:opacity-90 transition-opacity">Send Message</button>
+        <p id="form-success" class="hidden text-sm text-[#1B7A4B] dark:text-[#4ADE80] font-medium pt-2"></p>
+      </form>
+
+      <div class="md:col-span-2 space-y-4">
+        <a href="mailto:avinashsaini56789@gmail.com" class="contact-info-row">
+          <span class="material-symbols-outlined">mail</span>
+          <span>avinashsaini56789@gmail.com</span>
+        </a>
+        <a href="tel:+919812987452" class="contact-info-row">
+          <span class="material-symbols-outlined">call</span>
+          <span>+91-9812987452</span>
+        </a>
+        <a href="https://github.com/AvinashHr-35" target="_blank" rel="noopener" class="contact-info-row">
+          <span class="material-symbols-outlined">code</span>
+          <span>github.com/AvinashHr-35</span>
+        </a>
+        <a href="https://linkedin.com/in/avinashsaini" target="_blank" rel="noopener" class="contact-info-row">
+          <span class="material-symbols-outlined">work</span>
+          <span>linkedin.com/in/avinashsaini</span>
+        </a>
+        <a href="https://www.upwork.com/freelancers/~01d9fdac6531ea172c" target="_blank" rel="noopener" class="contact-info-row">
+          <span class="material-symbols-outlined">business_center</span>
+          <span>Upwork profile</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-[#E4E0D8] dark:border-[#3A423B] py-10">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+    <div>
+      <p class="font-display font-700">Avinash Saini</p>
+      <p class="text-[#817564] dark:text-[#B9B2A5] text-sm">Data Analyst · App Developer · Freelancer</p>
+    </div>
+    <ul class="flex flex-wrap gap-5 text-sm text-[#817564] dark:text-[#B9B2A5]">
+      <li><a href="#about" class="hover:text-[#4A7C59] dark:hover:text-[#6FA97F]">About</a></li>
+      <li><a href="#projects" class="hover:text-[#4A7C59] dark:hover:text-[#6FA97F]">Projects</a></li>
+      <li><a href="#services" class="hover:text-[#4A7C59] dark:hover:text-[#6FA97F]">Services</a></li>
+      <li><a href="#contact" class="hover:text-[#4A7C59] dark:hover:text-[#6FA97F]">Contact</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a href="https://github.com/AvinashHr-35" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon"><span class="material-symbols-outlined">code</span></a>
+      <a href="https://linkedin.com/in/avinashsaini" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon"><span class="material-symbols-outlined">work</span></a>
+      <a href="https://www.upwork.com/freelancers/~01d9fdac6531ea172c" target="_blank" rel="noopener" aria-label="Upwork" class="social-icon"><span class="material-symbols-outlined">business_center</span></a>
+      <a href="mailto:avinashsaini56789@gmail.com" aria-label="Email" class="social-icon"><span class="material-symbols-outlined">mail</span></a>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 mt-8 pt-6 border-t border-[#E4E0D8] dark:border-[#3A423B] flex flex-col sm:flex-row justify-between gap-2 text-xs text-[#817564] dark:text-[#B9B2A5]">
+    <p>© 2026 Avinash Saini. All rights reserved.</p>
+    <p>Built with HTML, CSS and JavaScript.</p>
+  </div>
+</footer>
+
+<div id="project-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-panel">
+    <button id="modal-close" aria-label="Close" class="modal-close"><span class="material-symbols-outlined">close</span></button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<button id="scroll-top" aria-label="Scroll to top" class="hidden">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

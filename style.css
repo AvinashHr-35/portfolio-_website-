@@ -1,0 +1,448 @@
+/* ==========================================================
+   Avinash Saini — Portfolio
+   Custom CSS on top of Tailwind utility classes.
+   Colors are kept as literal Tailwind arbitrary values in the
+   HTML (bg-[#...] / dark:bg-[#...]) so the palette stays easy
+   to find-and-replace in one place if you want to restyle later.
+   ========================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------- Accessibility ---------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #4A4E4A;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 0 0 8px 0;
+  z-index: 100;
+  font-size: 14px;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 2px solid #4A7C59;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.dark :focus-visible {
+  outline-color: #6FA97F;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Nav ---------- */
+
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #4A7C59;
+}
+.dark .nav-link:hover,
+.dark .nav-link.active {
+  color: #6FA97F;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #4A7C59;
+  border-radius: 2px;
+}
+.dark .nav-link.active::after {
+  background: #6FA97F;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 6px 0;
+}
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid #E4E0D8;
+  color: #817564;
+  transition: all 0.2s ease;
+}
+.social-icon:hover {
+  color: #4A7C59;
+  border-color: #4A7C59;
+  transform: translateY(-2px);
+}
+.dark .social-icon {
+  border-color: #3A423B;
+  color: #B9B2A5;
+}
+.dark .social-icon:hover {
+  color: #6FA97F;
+  border-color: #6FA97F;
+}
+
+/* ---------- Signature hero illustration ---------- */
+
+#signal-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw-signal 1.6s ease-out 0.3s forwards;
+}
+@keyframes draw-signal {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ---------- Cards ---------- */
+
+.info-card {
+  background: #fff;
+  border: 1px solid #E4E0D8;
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.info-card:hover {
+  transform: translateY(-3px);
+  border-color: #4A7C59;
+}
+.dark .info-card {
+  background: #242B24;
+  border-color: #3A423B;
+}
+.dark .info-card:hover {
+  border-color: #6FA97F;
+}
+
+.skill-card,
+.service-card,
+.project-card {
+  background: #fff;
+  border: 1px solid #E4E0D8;
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fade-up 0.5s ease forwards;
+}
+@keyframes fade-up {
+  to { opacity: 1; transform: translateY(0); }
+}
+.skill-card:hover,
+.service-card:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #4A7C59;
+  box-shadow: 0 16px 32px -18px rgba(74, 78, 74, 0.25);
+}
+.dark .skill-card,
+.dark .service-card,
+.dark .project-card {
+  background: #242B24;
+  border-color: #3A423B;
+}
+.dark .skill-card:hover,
+.dark .service-card:hover,
+.dark .project-card:hover {
+  border-color: #6FA97F;
+}
+
+.level-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #F0E8DB;
+  color: #8C6F35;
+}
+.dark .level-badge {
+  background: rgba(196, 166, 106, 0.22);
+  color: #D9BE8A;
+}
+
+.process-step {
+  background: #fff;
+  border: 1px solid #E4E0D8;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+}
+.dark .process-step {
+  background: #242B24;
+  border-color: #3A423B;
+}
+.process-num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #E4E0D8;
+  margin-bottom: 8px;
+}
+.dark .process-num {
+  color: #3A423B;
+}
+
+.chip {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #EEF2F8;
+  color: #4A4E4A;
+}
+.dark .chip {
+  background: #2C352C;
+  color: #ECEAE2;
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid #E4E0D8;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color 0.2s ease;
+}
+.contact-info-row:hover {
+  border-color: #4A7C59;
+  color: #4A7C59;
+}
+.dark .contact-info-row {
+  border-color: #3A423B;
+}
+.dark .contact-info-row:hover {
+  border-color: #6FA97F;
+  color: #6FA97F;
+}
+
+/* ---------- Filter buttons ---------- */
+
+.filter-btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #E4E0D8;
+  color: #817564;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover {
+  border-color: #4A7C59;
+  color: #4A7C59;
+}
+.filter-btn.active {
+  background: #4A4E4A;
+  border-color: #4A4E4A;
+  color: #fff;
+}
+.dark .filter-btn {
+  border-color: #3A423B;
+  color: #B9B2A5;
+}
+.dark .filter-btn:hover {
+  border-color: #6FA97F;
+  color: #6FA97F;
+}
+.dark .filter-btn.active {
+  background: #6FA97F;
+  border-color: #6FA97F;
+  color: #1A1F1B;
+}
+
+/* ---------- Project card internals ---------- */
+
+.project-thumb {
+  height: 140px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #F0E8DB, #F7F5F0);
+}
+.dark .project-thumb {
+  background: linear-gradient(135deg, #2C352C, #1E241E);
+}
+
+.btn-mini {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid #E4E0D8;
+  transition: all 0.2s ease;
+}
+.btn-mini:hover {
+  border-color: #4A7C59;
+  color: #4A7C59;
+}
+.btn-mini.primary {
+  background: #4A4E4A;
+  border-color: #4A4E4A;
+  color: #fff;
+}
+.dark .btn-mini {
+  border-color: #3A423B;
+}
+.dark .btn-mini.primary {
+  background: #6FA97F;
+  border-color: #6FA97F;
+  color: #1A1F1B;
+}
+.btn-mini[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Form ---------- */
+
+.form-input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #E4E0D8;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #4A4E4A;
+  transition: border-color 0.2s ease;
+}
+.form-input:focus {
+  outline: none;
+  border-color: #4A7C59;
+}
+.dark .form-input {
+  background: #242B24;
+  border-color: #3A423B;
+  color: #ECEAE2;
+}
+.dark .form-input:focus {
+  border-color: #6FA97F;
+}
+.form-input.invalid {
+  border-color: #C0392B;
+}
+
+.form-error {
+  color: #C0392B;
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* ---------- Modal ---------- */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 31, 27, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+.modal-overlay.hidden {
+  display: none;
+}
+.modal-panel {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 28px;
+  position: relative;
+}
+.dark .modal-panel {
+  background: #242B24;
+  color: #ECEAE2;
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EEF2F8;
+  color: #4A4E4A;
+}
+.dark .modal-close {
+  background: #2C352C;
+  color: #ECEAE2;
+}
+
+/* ---------- Scroll to top ---------- */
+
+#scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #4A4E4A;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px -8px rgba(74, 78, 74, 0.4);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 40;
+}
+#scroll-top:hover {
+  transform: translateY(-3px);
+}
+#scroll-top.hidden {
+  display: none;
+}
+.dark #scroll-top {
+  background: #6FA97F;
+  color: #1A1F1B;
+}
